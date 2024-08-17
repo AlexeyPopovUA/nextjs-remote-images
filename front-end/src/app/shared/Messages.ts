@@ -1,22 +1,26 @@
 export const Messages = {
   home: {
-    title: 'React 18 performance examples',
-    description: 'Web application with different React 18 performance examples',
+    title: 'Next.js remote image examples',
+    description: 'Web application with different use cases of remote images Optimization API',
   },
-  renderingSiblings: {
-    title: 'Re-rendering siblings',
-    description: 'Find out why components re-render when sharing state of their parent and how to improve this',
+  responsiveImage: {
+    title: 'Responsive image',
+    description: 'Explore how to use responsive images with Next.js and Optimization API',
   },
-  cachingProperties: {
-    title: 'Caching properties',
-    description: 'Find out why some of properties cause re-rendering',
+  thumbnails: {
+    title: 'Thumbnails',
+    description: 'Explore how to use thumbnails with Next.js and Optimization API',
   },
-  cachingCallback: {
-    title: 'Caching Callback',
-    description: 'Explore performance issues of components with callbacks as properties',
+  resizeableImage: {
+    title: 'Resizeable image',
+    description: 'Explore how to use resizeable images with Next.js and Optimization API',
   },
-  componentsAsProperties: {
-    title: 'Components as properties',
-    description: 'Investigate influence of components composition on rendering',
+  blurredImage: {
+    title: 'Blurred image',
+    description: 'Explore how to use blurred images with Next.js and Optimization API',
+  },
+  blurredAnimatedImage: {
+    title: 'Blurred animated image',
+    description: 'Explore how to use blurred animated images with Next.js and Optimization API',
   },
 } as const;
