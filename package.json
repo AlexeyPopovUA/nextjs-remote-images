@@ -1,0 +1,17 @@
+{
+  "name": "nextjs-remote-images",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "cloud",
+    "front-end"
+  ],
+  "scripts": {
+    "install-all": "npm i -ws --include-workspace-root",
+    "dev-front": "npm run dev -w front-end",
+    "update-dependencies-all": "npm run -ws --include-workspace-root update-dependencies"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4"
+  }
+}
