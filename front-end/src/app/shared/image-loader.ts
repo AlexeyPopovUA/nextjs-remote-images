@@ -3,8 +3,12 @@
 import { ImageLoaderProps } from 'next/image';
 import { getContainImageURL } from './image';
 
-export function imageLoader(props: ImageLoaderProps) {
-  const { src, width, quality } = props;
-
-  return getContainImageURL({ src, width, quality });
+export function imageLoader({ src, width, quality }: ImageLoaderProps) {
+  return getContainImageURL({
+    src,
+    width,
+    // note, that the next/image loader has no height parameter
+    height: undefined,
+    quality,
+  });
 }

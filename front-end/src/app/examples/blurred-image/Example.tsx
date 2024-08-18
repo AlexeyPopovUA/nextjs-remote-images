@@ -18,6 +18,7 @@ export async function Example() {
         sizes="100vw"
         className="h-auto w-full"
         width={500}
+        // Assigning a correct ratio makes blurred and loaded image have the same height, so it doesn't jump
         height={500 / blurredImageSrcPair.ratio}
       />
     </ExampleBox>
