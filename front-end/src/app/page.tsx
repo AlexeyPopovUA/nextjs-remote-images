@@ -21,9 +21,9 @@ export default function Home() {
         description={Messages.thumbnails.description}
       />
       <HomeNavLink
-        path="/examples/resizeable-image/"
-        label={Messages.resizeableImage.title}
-        description={Messages.resizeableImage.description}
+        path="/examples/image-fit/"
+        label={Messages.imageFit.title}
+        description={Messages.imageFit.description}
       />
       <HomeNavLink
         path="/examples/blurred-image/"

@@ -11,9 +11,9 @@ export const Messages = {
     title: 'Thumbnails',
     description: 'Explore how to use thumbnails with Next.js and Optimization API',
   },
-  resizeableImage: {
-    title: 'Resizeable image',
-    description: 'Explore how to use resizeable images with Next.js and Optimization API',
+  imageFit: {
+    title: 'Image fit',
+    description: 'Explore how to fit images with Next.js and Optimization API',
   },
   blurredImage: {
     title: 'Blurred image',
