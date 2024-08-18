@@ -6,8 +6,6 @@ import { ExampleBox } from '@/app/shared/ExampleBox';
 import { imageLoader } from '@/app/shared/image-loader';
 
 export function Example() {
-  console.log('Example');
-
   return (
     <ExampleBox>
       <Image
