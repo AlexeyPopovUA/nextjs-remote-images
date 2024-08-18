@@ -1,8 +1,8 @@
-import Jimp from "jimp";
+import Jimp from 'jimp';
 
-const BASE_URL = "https://images.oleksiipopov.com";
-const BUCKET = "serverless-image-handler-image-source";
-const BASE_PATH = "examples/nextjs-remote-images";
+const BASE_URL = 'https://images.oleksiipopov.com';
+const BUCKET = 'serverless-image-handler-image-source';
+const BASE_PATH = 'examples/nextjs-remote-images';
 const DEFAULT_IMAGE_QUALITY = 75;
 
 type Props = {
@@ -15,21 +15,21 @@ type Props = {
 function getDefaultBucketProps(src: string) {
   return {
     bucket: BUCKET,
-    key: `${BASE_PATH}${src}`
+    key: `${BASE_PATH}${src}`,
   };
 }
 
 function getDefaultImageFormatProps(quality: number) {
   return {
     webp: {
-      quality
+      quality,
     },
     png: {
-      quality
+      quality,
     },
     jpg: {
-      quality
-    }
+      quality,
+    },
   };
 }
 
@@ -38,7 +38,7 @@ function encodePayloadForUrl(configuration: { [key: string]: unknown }) {
 }
 
 export function getContainImageURL(props: Props) {
-  const {src, width, height, quality = DEFAULT_IMAGE_QUALITY} = props;
+  const { src, width, height, quality = DEFAULT_IMAGE_QUALITY } = props;
 
   const taskToEncode = {
     ...getDefaultBucketProps(src),
@@ -47,9 +47,9 @@ export function getContainImageURL(props: Props) {
       resize: {
         width,
         height,
-        fit: "contain"
-      }
-    }
+        fit: 'contain',
+      },
+    },
   };
 
   return encodePayloadForUrl(taskToEncode);
@@ -60,13 +60,13 @@ async function getImageDimensionsRatio(props: { src: string }) {
     ...getDefaultBucketProps(props.src),
     edits: {
       png: {
-        quality: 100
+        quality: 100,
       },
       resize: {
         // should be relatively big to determine the ratio w/o effect of internal numbers rounding
-        width: 100
-      }
-    }
+        width: 100,
+      },
+    },
   });
 
   const blob = await (await fetch(url)).arrayBuffer();
@@ -74,32 +74,32 @@ async function getImageDimensionsRatio(props: { src: string }) {
   return imgData.getWidth() / imgData.getHeight();
 }
 
-async function getBlurDataURL({src, width, height}: { src: string, width: number, height: number }) {
+async function getBlurDataURL({ src, width, height }: { src: string; width: number; height: number }) {
   const payloadURL = encodePayloadForUrl({
     ...getDefaultBucketProps(src),
     edits: {
       png: {
-        quality: 75
+        quality: 75,
       },
       resize: {
         width,
         height,
-        fit: "outside"
-      }
-    }
+        fit: 'outside',
+      },
+    },
   });
   const blob = await (await fetch(payloadURL)).arrayBuffer();
   const imgData = await Jimp.read(Buffer.from(blob));
   return imgData.getBase64Async(-1);
 }
 
-export const readBlurredImageSrcPair = async ({src}: { src: string; }) => {
-  const ratio = await getImageDimensionsRatio({src});
-  const blurDataURL = await getBlurDataURL({src, width: 10, height: 10 / ratio});
+export const readBlurredImageSrcPair = async ({ src }: { src: string }) => {
+  const ratio = await getImageDimensionsRatio({ src });
+  const blurDataURL = await getBlurDataURL({ src, width: 10, height: 10 / ratio });
 
-  return ({
+  return {
     src,
     ratio,
-    blurDataURL
-  });
+    blurDataURL,
+  };
 };

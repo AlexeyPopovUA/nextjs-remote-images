@@ -1,6 +1,6 @@
-import {HomeNavLink} from '@/app/HomeNavLink';
-import type {Metadata} from 'next';
-import {Messages} from '@/app/shared/Messages';
+import { HomeNavLink } from '@/app/HomeNavLink';
+import type { Metadata } from 'next';
+import { Messages } from '@/app/shared/Messages';
 
 export const metadata: Metadata = {
   title: Messages.home.title,

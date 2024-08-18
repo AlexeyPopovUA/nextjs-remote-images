@@ -1,8 +1,8 @@
-import {ImageLoaderProps} from "next/image";
-import {getContainImageURL} from "./image";
+import { ImageLoaderProps } from 'next/image';
+import { getContainImageURL } from './image';
 
 export function imageLoader(props: ImageLoaderProps) {
-  const {src, width, quality} = props;
+  const { src, width, quality } = props;
 
-  return getContainImageURL({src, width, quality})
+  return getContainImageURL({ src, width, quality });
 }

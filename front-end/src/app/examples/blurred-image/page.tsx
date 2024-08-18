@@ -1,7 +1,7 @@
-import {Example} from '@/app/examples/responsive-image/Example';
-import {Metadata} from 'next';
-import {Header} from '@/app/Header';
-import {Messages} from '@/app/shared/Messages';
+import { Example } from '@/app/examples/responsive-image/Example';
+import { Metadata } from 'next';
+import { Header } from '@/app/Header';
+import { Messages } from '@/app/shared/Messages';
 
 export const metadata: Metadata = {
   title: Messages.blurredImage.title,
@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <Header text={Messages.blurredImage.description}/>
-      <Example/>
+      <Header text={Messages.blurredImage.description} />
+      <Example />
     </>
   );
 }

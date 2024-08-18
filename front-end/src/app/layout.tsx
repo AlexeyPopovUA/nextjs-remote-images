@@ -1,17 +1,12 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Header } from '@/app/Header';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import clsx from 'clsx';
 import { Footer } from '@/app/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en">
       <body className={clsx(inter.className, 'min-h-screen')}>
