@@ -1,3 +1,5 @@
+'use client';
+
 import { ImageLoaderProps } from 'next/image';
 import { getContainImageURL } from './image';
 
