@@ -12,7 +12,7 @@ export async function Example() {
       <Image
         src="/20231105_143110.jpg"
         loader={imageLoader}
-        placeholder={'blur'}
+        placeholder="blur"
         blurDataURL={blurredImageSrcPair.blurDataURL}
         alt="Picture of the author"
         sizes="100vw"
