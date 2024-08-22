@@ -52,6 +52,7 @@ export async function Example() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {imagesDataForRendering.map((image, index) => (
             <CardImageContains
+              key={image.title}
               src={image.src}
               blurDataURL={image.blurDataURL}
               ratio={image.ratio}
@@ -66,6 +67,7 @@ export async function Example() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {imagesDataForRendering.map((image, index) => (
             <CardImageCovers
+              key={image.title}
               src={image.src}
               blurDataURL={image.blurDataURL}
               ratio={image.ratio}
