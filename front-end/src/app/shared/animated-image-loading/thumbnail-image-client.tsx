@@ -20,7 +20,7 @@ export function ThumbnailImageClient(props: Props) {
   }, []);
 
   const classNameBlurred = clsx(props.className, `thumbnail-client-image`);
-  const classNameFinal = clsx(props.className, `thumbnail-client-image absolute left-0 top-0 z-0 w-full h-auto`);
+  const classNameFinal = clsx(props.className, `thumbnail-client-image absolute left-0 top-0 z-0`);
 
   const commonCfg: Partial<ImageProps> = useMemo(
     () => ({

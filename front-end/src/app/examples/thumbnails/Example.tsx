@@ -50,7 +50,7 @@ export async function Example() {
       <ExampleBox className="mb-8">
         <h2 className="mb-8 text-2xl font-bold">Full image thumbnails</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {imagesDataForRendering.map((image, index) => (
+          {imagesDataForRendering.map((image) => (
             <CardImageContains
               key={image.title}
               src={image.src}
@@ -65,7 +65,7 @@ export async function Example() {
       <ExampleBox>
         <h2 className="mb-8 text-2xl font-bold">Cropped image thumbnails</h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {imagesDataForRendering.map((image, index) => (
+          {imagesDataForRendering.map((image) => (
             <CardImageCovers
               key={image.title}
               src={image.src}

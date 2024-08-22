@@ -35,7 +35,7 @@ export function CardImageCovers({ src, blurDataURL, ratio, title, description }:
     <div className="rounded-md border-2 p-4 hover:border-amber-500 hover:text-amber-600">
       <div className="flex flex-col items-stretch pb-4 hover:text-amber-600">
         <ThumbnailImage
-          className="mb-4 ml-auto mr-auto h-56"
+          className="mb-4 h-56"
           imageClassName="h-56 object-cover object-center"
           unoptimized={true}
           src={src}
