@@ -1,5 +1,5 @@
 export const Footer = () => (
-  <footer className="w-full px-4 py-2 text-center font-mono text-lg">
+  <footer className="mt-8 w-full px-4 py-2 text-center font-mono text-lg">
     <p>
       Developed by{' '}
       <a className="underline" href="https://oleksiipopov.com">
