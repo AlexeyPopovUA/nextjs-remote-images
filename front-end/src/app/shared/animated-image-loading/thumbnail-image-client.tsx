@@ -4,7 +4,7 @@ import React, { CSSProperties, useCallback, useMemo, useState } from 'react';
 import Image, { ImageProps } from 'next/image';
 import clsx from 'clsx';
 
-import '../../examples/blurred-animated-image/thumbnail-client-image.css';
+import './thumbnail-client-image.css';
 
 type Props = ImageProps & {
   // overridden as required
@@ -33,7 +33,13 @@ export function ThumbnailImageClient(props: Props) {
     [props.priority, props.width, props.height, props.loading],
   );
 
-  const blurredImageStyle = commonCfg.style;
+  const blurredImageStyle: CSSProperties = useMemo(
+    () => ({
+      ...commonCfg.style,
+      opacity: loaded ? 0 : 1,
+    }),
+    [commonCfg.style, loaded],
+  );
 
   const normalImageStyle: CSSProperties = useMemo(
     () => ({

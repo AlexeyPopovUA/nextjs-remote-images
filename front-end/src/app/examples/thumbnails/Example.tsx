@@ -49,6 +49,7 @@ export async function Example() {
     <>
       <ExampleBox className="mb-8">
         <h2 className="mb-8 text-2xl font-bold">Full image thumbnails</h2>
+        <h3 className="mb-8 text-xl font-bold">Scroll down 👇 to see more examples</h3>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {imagesDataForRendering.map((image) => (
             <CardImageContains
