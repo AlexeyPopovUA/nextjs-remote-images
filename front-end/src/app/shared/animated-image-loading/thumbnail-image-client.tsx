@@ -33,18 +33,11 @@ export function ThumbnailImageClient(props: Props) {
     [props.priority, props.width, props.height, props.loading],
   );
 
-  const blurredImageStyle: CSSProperties = useMemo(
-    () => ({
-      ...commonCfg.style,
-      opacity: loaded ? 0 : 1,
-    }),
-    [commonCfg.style, loaded],
-  );
-
   const normalImageStyle: CSSProperties = useMemo(
     () => ({
       ...commonCfg.style,
       opacity: loaded ? 1 : 0,
+      transition: 'opacity 0.3s ease-in-out',
     }),
     [commonCfg.style, loaded],
   );
@@ -56,7 +49,7 @@ export function ThumbnailImageClient(props: Props) {
         aria-hidden={true}
         className={classNameBlurred}
         src={props.blurDataURL}
-        style={blurredImageStyle}
+        style={commonCfg.style}
         alt={props.alt}
         unoptimized={true}
       />
