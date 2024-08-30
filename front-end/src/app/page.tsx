@@ -16,29 +16,29 @@ export default function Home() {
       </div>
       <div className="mb-32 grid text-center lg:mt-32 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         <HomeNavLink
-          path="/examples/responsive-image/"
-          label={Messages.responsiveImage.title}
-          description={Messages.responsiveImage.description}
+          path="/examples/responsive-single-image/"
+          label={Messages.responsiveSingleImage.title}
+          description={Messages.responsiveSingleImage.description}
         />
         <HomeNavLink
-          path="/examples/thumbnails/"
-          label={Messages.thumbnails.title}
-          description={Messages.thumbnails.description}
+          path="/examples/blurred-single-image/"
+          label={Messages.blurredSingleImage.title}
+          description={Messages.blurredSingleImage.description}
         />
         <HomeNavLink
-          path="/examples/image-fit/"
-          label={Messages.imageFit.title}
-          description={Messages.imageFit.description}
+          path="/examples/blurred-animated-single-image/"
+          label={Messages.blurredAnimatedSingleImage.title}
+          description={Messages.blurredAnimatedSingleImage.description}
         />
         <HomeNavLink
-          path="/examples/blurred-image/"
-          label={Messages.blurredImage.title}
-          description={Messages.blurredImage.description}
+          path="/examples/thumbnail-image-fit/"
+          label={Messages.thumbnailImageFit.title}
+          description={Messages.thumbnailImageFit.description}
         />
         <HomeNavLink
-          path="/examples/blurred-animated-image/"
-          label={Messages.blurredAnimatedImage.title}
-          description={Messages.blurredAnimatedImage.description}
+          path="/examples/animated-thumbnails/"
+          label={Messages.animatedThumbnails.title}
+          description={Messages.animatedThumbnails.description}
         />
       </div>
     </>

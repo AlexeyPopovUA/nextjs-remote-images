@@ -1,6 +1,6 @@
 import { ExampleBox } from '@/app/shared/ExampleBox';
 import { getInsideImageURL, readBlurredImageSrcPair } from '@/app/shared/image';
-import { CardImageContains, CardImageCovers } from '@/app/examples/thumbnails/CardImage';
+import { CardImageContains, CardImageCovers } from '@/app/examples/animated-thumbnails/CardImage';
 
 const images = [
   {

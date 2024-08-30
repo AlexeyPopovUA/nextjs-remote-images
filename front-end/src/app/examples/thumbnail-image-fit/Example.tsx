@@ -8,8 +8,8 @@ import {
   getInsideImageURL,
   getOutsideImageURL,
 } from '@/app/shared/image';
-import { ThumbnailFrame } from '@/app/examples/image-fit/ThumbnailFrame';
-import { FigureWithText } from '@/app/examples/image-fit/FigureWithText';
+import { ThumbnailFrame } from '@/app/examples/thumbnail-image-fit/ThumbnailFrame';
+import { FigureWithText } from '@/app/examples/thumbnail-image-fit/FigureWithText';
 
 export function Example() {
   const containUrlProps: getContainImageURL.Props = { width: 250, height: 250, src: '/20231105_143110.jpg' };
