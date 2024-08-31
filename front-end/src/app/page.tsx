@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <div className="py-16 text-center text-2xl">
+      <div className="px-4 py-16 text-center text-2xl">
         This is a simple demo web application showcasing the integration of the AWS Serverless Image Handler with a
         statically exported Next.js website
       </div>
