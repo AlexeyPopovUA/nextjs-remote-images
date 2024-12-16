@@ -6,12 +6,14 @@ import { ThumbnailImage } from '@/app/shared/animated-image-loading/thumbnail-im
 import { imageLoader } from '@/app/shared/image-loader';
 
 export async function Example() {
-  const blurredImageSrcPair = await readBlurredImageSrcPair({ src: '/20231105_143110.jpg' });
+  const blurredImageSrcPair = await readBlurredImageSrcPair({
+    src: '/20231105_143110_single_animated_blur_example.jpeg',
+  });
 
   return (
     <ExampleBox>
       <ThumbnailImage
-        src="/20231105_143110.jpg"
+        src="/20231105_143110_single_animated_blur_example.jpeg"
         alt="Picture of the author"
         blurDataURL={blurredImageSrcPair.blurDataURL}
         sizes="100vw"

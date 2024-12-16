@@ -5,12 +5,12 @@ import React from 'react';
 import { readBlurredImageSrcPair } from '@/app/shared/image';
 
 export async function Example() {
-  const blurredImageSrcPair = await readBlurredImageSrcPair({ src: '/20231105_143110.jpg' });
+  const blurredImageSrcPair = await readBlurredImageSrcPair({ src: '/20231105_143110_single_blur_example.jpeg' });
 
   return (
     <ExampleBox>
       <Image
-        src="/20231105_143110.jpg"
+        src="/20231105_143110_single_blur_example.jpeg"
         loader={imageLoader}
         placeholder="blur"
         blurDataURL={blurredImageSrcPair.blurDataURL}
